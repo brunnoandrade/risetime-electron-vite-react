@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import alarmSound from "./assets/alarm-sound.mp3";
 
-const options = [5, 10, 15, 30];
+const options = [5, 10, 15, 20, 30];
 
 export default function App() {
   const [intervalSec, setIntervalSec] = useState(10);
