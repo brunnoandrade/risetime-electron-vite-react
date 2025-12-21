@@ -51,14 +51,7 @@ export default function App() {
         </select>
 
         <div style={styles.buttons}>
-          <button
-            onClick={startTimer}
-            disabled={running}
-            style={{
-              ...styles.button,
-              background: "linear-gradient(90deg, #ff00cc, #3333ff)",
-            }}
-          >
+          <button onClick={startTimer} disabled={running}>
             Iniciar
           </button>
           <button
