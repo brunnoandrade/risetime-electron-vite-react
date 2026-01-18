@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import alarmSound from "./assets/alarm-sound.mp3";
 
-const options = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 60];
+const options = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60];
 
 export default function App() {
   const [intervalSec, setIntervalSec] = useState(10);
@@ -19,9 +19,12 @@ export default function App() {
     triggerAlarm();
     if (running) return;
 
-    timerRef.current = setInterval(() => {
-      triggerAlarm();
-    }, intervalSec * 60 * 1000);
+    timerRef.current = setInterval(
+      () => {
+        triggerAlarm();
+      },
+      intervalSec * 60 * 1000,
+    );
 
     setRunning(true);
   };
